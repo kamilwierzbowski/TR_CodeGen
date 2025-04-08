@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Triumphant Records Catalog Number Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="TriumphantRecords-Black.jpg" alt="Triumphant Records Logo" class="logo">
+    <h1>Triumphant Records</h1>
+    <h1>Catalog Number Generator</h1>
+
+    <label>Publisher:
+      <input type="text" id="publisher" value="TR" disabled="true">
+    </label>
+
+    <label>Format:
+      <select id="format">
+        <option value="LP">Vinyl 12"</option>
+        <option value="SP">Vinyl 7"</option>
+        <option value="CD">CD</option>
+        <option value="MC">Cassette</option>
+        <option value="DIGI">Digital</option>
+        <option value="MERCH">Merch</option>
+      </select>
+    </label>
+
+    <label>Suffix (optional):
+      <input type="text" id="suffix">
+    </label>
+
+    <label>Artist:
+      <input type="text" id="artist">
+    </label>
+
+    <label>Title:
+      <input type="text" id="title">
+    </label>
+
+    <button class="trigger-button" onclick="generate()">Generate Catalog Number</button>
+
+    <h2 id="result"></h2>
+    <h2 id="resultAdd"></h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    color: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    border: 1px solid #555;
+    padding: 2rem;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #222;
+    color: #eee;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+  
+  .trigger-button {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 100;
+    margin-bottom: 1rem;
+  }
+  
+  .trigger-button:hover {
+    background-color: #ff2222;
+    transform: scale(1.05);
+  }
+  
+  .trigger-button:active {
+    transform: scale(0.98);
+  }
+  
+  .skull {
+    position: absolute;
+    top: -150px;
+    user-select: none;
+    font-size: 50px;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 1;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(calc(100vh + 150px)) rotate(360deg);
+      opacity: 0;
+    }
+  }
